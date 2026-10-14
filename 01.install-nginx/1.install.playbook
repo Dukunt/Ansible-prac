@@ -1,5 +1,5 @@
 - name: intsall and run nginx
-  hosts: sat
+  hosts: local
   become: yes
   tasks:
   - name: install nginx
