@@ -1,0 +1,13 @@
+- name: intsall and run nginx
+  host: sat
+  become: yes
+  tasks:
+   - name: install nginx
+      ansible.build.package:
+       name: nginx
+       state: present
+   - name: start nginx
+      ansible.build.service:
+       name: nginx
+       state: started
+       enabled: yes
