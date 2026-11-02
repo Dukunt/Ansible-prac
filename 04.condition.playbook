@@ -1,5 +1,5 @@
 - name: condition demo
-  hosts: local
+  hosts: ansible
   connection: local
   vars:
    Is_live: False
