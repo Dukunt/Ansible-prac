@@ -1,6 +1,6 @@
 - name: condition demo
   hosts: ansible
-  connection: local
+  #connection: local
   vars:
    Is_live: False
   tasks:
