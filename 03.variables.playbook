@@ -1,0 +1,11 @@
+- name: variable demo
+  hosts: local
+  connection: local
+  vars:
+     project: "Roboshop"
+     Environment: "Dev"
+     Component: "Catalogue"
+  tasks:
+   - name: print variable
+     ansible.builtin.debug:
+      msg: "Project name is {{project}}"   
