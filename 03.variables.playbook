@@ -1,5 +1,6 @@
 - name: variable demo
   hosts: ansible
+  connection: local
   vars:
      project: "Roboshop"
      Environment: "Dev"
