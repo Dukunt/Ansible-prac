@@ -8,7 +8,7 @@
 
    - name: print the user output in shell module
      ansible.builtin.debug:
-      msg: " {{user_output}} "
+      msg: " {{users}} "
 
    - name: command module demo
      ansible.builtin.shell: ls -ltr > files.txt
