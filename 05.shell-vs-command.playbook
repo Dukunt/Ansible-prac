@@ -5,16 +5,18 @@
    - name: shell module demo
      ansible.builtin.shell: cat /etc/passwd | gerp root
      register: user_output
+
    - name: print the user output in shell module
      ansible.builtin.debug:
-     msg: " {{user_output}} "
+      msg: " {{user_output}} "
 
    - name: command module demo
      ansible.builtin.command: ls -ltr > files.txt
      register: files_output
+     
    - name: print the user output in shell module
      ansible.builtin.debug:
-     msg: " {{files_output}} "  
+      msg: " {{files_output}} "  
 
 
 
