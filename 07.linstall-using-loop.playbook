@@ -10,3 +10,15 @@
     loop:
      - nginx
      - mysql
+
+  - name: start service
+    ansible.builtin.service:
+     name: "{{item}}"
+     state: started
+     enabled: yes
+    loop:
+     - nginx
+
+
+
+
