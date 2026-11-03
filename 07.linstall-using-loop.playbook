@@ -1,0 +1,12 @@
+- name: configuration using loops
+  hosts: local
+  connection: local
+  become : yes
+  tasks:
+  - name: update software using loops_demo
+    ansible.builtin.package:
+     name: "{{item}}"
+     state: present
+    loop:
+     - nginx
+     - mysql
