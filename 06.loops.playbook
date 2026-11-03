@@ -1,0 +1,12 @@
+- name: demo on loops
+  hosts: local
+  connection: local
+  tasks:
+   - name: loop demo
+     ansible.builtin.debug:
+     msg: "configuartion list {{item}}"
+     loop:
+      - nginx
+      - sql
+      - rabbitmq
+      - mongo 
