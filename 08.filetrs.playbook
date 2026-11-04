@@ -1,0 +1,10 @@
+- name: demo for filters
+  hosts: local
+  connection: local
+  vars:
+   topics: shell, ansibe, terraform, git
+  
+  tasks:
+   - name: string to list conversion using split
+     ansible.builtin.debug:
+      msg: "{{ topics | split(',') }}"
