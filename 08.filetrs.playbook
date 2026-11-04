@@ -8,3 +8,12 @@
    - name: string to list conversion using split
      ansible.builtin.debug:
       msg: "{{ topics | split(',') }}"
+   
+   - name: read yaml file
+     ansible.builtin.set_fact:  # setting the variable
+      stu_y: " {{ lookup (file, 'students.yaml') | from_yaml }}
+
+   - name: convert yaml to Json
+     ansible.builtin.debug:
+      msg: "{{ stu_y | to_nice_json }}"           
+      
