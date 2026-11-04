@@ -11,7 +11,7 @@
    
    - name: read yaml file
      ansible.builtin.set_fact:  # setting the variable
-      stu_y: " {{ lookup (file, 'students.yaml') | from_yaml }}
+      stu_y: " {{ lookup (file, 'students.yaml') | from_yaml }} "
 
    - name: convert yaml to Json
      ansible.builtin.debug:
